@@ -13,7 +13,10 @@ namespace DialogueSystem
         
         public void InitiateDialogue()
         {
-            dialogue.DialogueCharacter = Character;
+            if(Character != null)
+            {
+                dialogue.DialogueCharacter = Character;
+            }
             DialogueSystem.Instance.ProcessDialogue(dialogue);
         }
     }
