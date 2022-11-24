@@ -18,3 +18,5 @@ Optionally, you can assign a different character here to override the Character 
 You can also initiate dialogues through the DialogueSystem static instance - pass a Dialogue parameter to the DialogueSystem.Instance's "ProcessDialogue" method.
 
 Dialogue options that do not trigger a state will cause the system to exit the dialogue.
+
+You can find a simple example scene in the DialogueSystem / Example folder.
