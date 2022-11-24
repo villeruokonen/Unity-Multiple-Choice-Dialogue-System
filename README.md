@@ -1,6 +1,8 @@
 # Unity-Multiple-Choice-Dialogue-System
  Simple dialogue system, supports multiple player dialogue options, character soundbytes (animal crossing style).
 
+![dialogue-gif](https://user-images.githubusercontent.com/99807061/203761563-418137ac-5b9d-4258-80ee-0a3a5256bacc.gif)
+
 How-to:
 Use the Dialogue Builder tool found in Unity's Window / Dialogue System / Dialogue Builder to more simply create new Dialogues.
 Alternatively, you can create Dialogue and Dialogue Character ScriptableObject assets manually through Assets / Create / Dialogue System.
