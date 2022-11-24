@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bfaa8590a19f840a971f0f276f7fe3, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  DialogueCharacter: {fileID: 11400000, guid: c352aa5c4a84c9e41ae25678723f0d67, type: 2}
+  DialogueStates:
+  - CharacterDialogueLine: Hey there buddy!
+    DialogueOptions:
+    - PlayerDialogueLine: What's up man.
+      IsFillerOption: 0
+      TriggerStateIndex: 2
+    - PlayerDialogueLine: Huh?
+      IsFillerOption: 1
+      TriggerStateIndex: 1
+    StateIndex: 0
+  - CharacterDialogueLine: All good man.
+    DialogueOptions:
+    - PlayerDialogueLine: Good to hear.
+      IsFillerOption: 0
+      TriggerStateIndex: 10
+    StateIndex: 2
+  - CharacterDialogueLine: What the hell do you mean "huh"?!
+    DialogueOptions:
+    - PlayerDialogueLine: Sorry, I just woke up.
+      IsFillerOption: 0
+      TriggerStateIndex: 4
+    - PlayerDialogueLine: Huh?
+      IsFillerOption: 1
+      TriggerStateIndex: 3
+    StateIndex: 1
+  - CharacterDialogueLine: I'm not talking to you any more.
+    DialogueOptions:
+    - PlayerDialogueLine: ...
+      IsFillerOption: 1
+      TriggerStateIndex: 6
+    StateIndex: 3
+  - CharacterDialogueLine: Yeah, I didn't sleep too good last night myself.
+    DialogueOptions:
+    - PlayerDialogueLine: Gotta go.
+      IsFillerOption: 0
+      TriggerStateIndex: 10
+    StateIndex: 4
