@@ -19,7 +19,7 @@ You can also initiate dialogues through the DialogueSystem static instance - pas
 
 Dialogue options that do not trigger a state will cause the system to exit the dialogue.
 
-Use the JSON Tools to create a JSON file based on your Dialogue. Use the Dialogue Builder tool found in Unity's Window / Dialogue System / Dialogue JSON Tools.
+Use the JSON Tools to create a JSON file based on your Dialogue. You can find the tools in Unity's Window / Dialogue System / Dialogue JSON Tools.
 You can edit this JSON and then apply those changes by using the JSON Tools' "Update from JSON" option. Just make sure you don't move the JSON file from the folder the system creates for you.
 
 You can find a simple example scene in the DialogueSystem / Example folder.
