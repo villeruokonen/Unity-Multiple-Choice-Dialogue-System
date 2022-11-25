@@ -1,7 +1,7 @@
 # Unity-Multiple-Choice-Dialogue-System
  Simple dialogue system, supports multiple player dialogue options, character soundbytes (animal crossing style).
 
-![dialogue-gif](https://user-images.githubusercontent.com/99807061/203761563-418137ac-5b9d-4258-80ee-0a3a5256bacc.gif)
+https://user-images.githubusercontent.com/99807061/203967493-1c062f09-1b20-4149-b16a-f5e1aaa0c48a.mp4
 
 How-to:
 Use the Dialogue Builder tool found in Unity's Window / Dialogue System / Dialogue Builder to more simply create new Dialogues.
@@ -18,5 +18,8 @@ Optionally, you can assign a different character here to override the Character 
 You can also initiate dialogues through the DialogueSystem static instance - pass a Dialogue parameter to the DialogueSystem.Instance's "ProcessDialogue" method.
 
 Dialogue options that do not trigger a state will cause the system to exit the dialogue.
+
+Use the JSON Tools to create a JSON file based on your Dialogue. Use the Dialogue Builder tool found in Unity's Window / Dialogue System / Dialogue JSON Tools.
+You can edit this JSON and then apply those changes by using the JSON Tools' "Update from JSON" option. Just make sure you don't move the JSON file from the folder the system creates for you.
 
 You can find a simple example scene in the DialogueSystem / Example folder.
