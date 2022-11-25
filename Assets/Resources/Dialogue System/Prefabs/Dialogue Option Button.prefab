@@ -99,11 +99,11 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 24
   m_fontSizeMax: 32
-  m_fontStyle: 2
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -2
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -236,3 +236,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07271ad76cfb39e49a0327c3c52ab52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueButtonIndex: 0

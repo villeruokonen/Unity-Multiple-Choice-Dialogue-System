@@ -10,13 +10,13 @@ namespace DialogueSystem
         [System.Serializable]
         public class DialogueState
         {
+            public int StateIndex;
             [Tooltip("What should the non-player-character say in this state?")]
             [SerializeField]
             public string CharacterDialogueLine;
             [Tooltip("The list of options of what to say for the player to choose from")]
             [SerializeField]
             public List<DialogueOption> DialogueOptions;
-            public int StateIndex;
             public void InitializeState(string characterLine, string[] playerDialogueOptions, int[] playerOptionIds, bool[] optionsAreFiller, int stateIndex)
             {
                 CharacterDialogueLine = characterLine;

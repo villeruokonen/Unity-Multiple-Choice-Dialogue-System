@@ -1,0 +1,88 @@
+{
+    "DialogueCharacter": {
+        "instanceID": 23158
+    },
+    "DialogueStates": [
+        {
+            "StateIndex": 0,
+            "CharacterDialogueLine": "Hey there buddy!",
+            "DialogueOptions": [
+                {
+                    "PlayerDialogueLine": "What's up man.",
+                    "IsFillerOption": false,
+                    "TriggerStateIndex": 2
+                },
+                {
+                    "PlayerDialogueLine": "Huh?",
+                    "IsFillerOption": true,
+                    "TriggerStateIndex": 1
+                }
+            ]
+        },
+        {
+            "StateIndex": 2,
+            "CharacterDialogueLine": "All good man.",
+            "DialogueOptions": [
+                {
+                    "PlayerDialogueLine": "Good to hear.",
+                    "IsFillerOption": false,
+                    "TriggerStateIndex": 10
+                }
+            ]
+        },
+        {
+            "StateIndex": 1,
+            "CharacterDialogueLine": "What the hell do you mean \"huh\"?!",
+            "DialogueOptions": [
+                {
+                    "PlayerDialogueLine": "Sorry, I just woke up.",
+                    "IsFillerOption": false,
+                    "TriggerStateIndex": 4
+                },
+                {
+                    "PlayerDialogueLine": "Huh?",
+                    "IsFillerOption": true,
+                    "TriggerStateIndex": 3
+                }
+            ]
+        },
+        {
+            "StateIndex": 3,
+            "CharacterDialogueLine": "I'm not talking to you any more.",
+            "DialogueOptions": [
+                {
+                    "PlayerDialogueLine": "...",
+                    "IsFillerOption": true,
+                    "TriggerStateIndex": 69
+                }
+            ]
+        },
+        {
+            "StateIndex": 4,
+            "CharacterDialogueLine": "Yeah, I didn't sleep too good last night myself.",
+            "DialogueOptions": [
+                {
+                    "PlayerDialogueLine": "Why's that?",
+                    "IsFillerOption": false,
+                    "TriggerStateIndex": 5
+                },
+                {
+                    "PlayerDialogueLine": "Gotta go.",
+                    "IsFillerOption": true,
+                    "TriggerStateIndex": 69
+                }
+            ]
+        },
+        {
+            "StateIndex": 5,
+            "CharacterDialogueLine": "I can't close my eyes. I don't have eyelids.",
+            "DialogueOptions": [
+                {
+                    "PlayerDialogueLine": "...",
+                    "IsFillerOption": true,
+                    "TriggerStateIndex": 69
+                }
+            ]
+        }
+    ]
+}
