@@ -135,8 +135,15 @@ namespace DialogueSystem
             AudioClip charAudio = dialogue.DialogueCharacter.SpeechSoundBite;
             int speed = dialogue.DialogueCharacter.TalkSpeed;
 
-            StartCoroutine(FillOutCharacterDialogue(currentState.CharacterDialogueLine, speed, charAudio));
+            StartCoroutine(FillOutCharacterDialogue(currentState.CharacterDialogueLine, _currentOptions, speed, charAudio));
             _characterNameText.text = dialogue.DialogueCharacter.CharacterName;
+
+            
+        }
+
+        IEnumerator FillOutCharacterDialogue(string line, List<Dialogue.DialogueOption> playerOptions, int speed = 5, AudioClip characterSoundbite = null)
+        {
+            string targetLine = line;
 
             if(_currentOptionObjects != null)
             {
@@ -148,20 +155,20 @@ namespace DialogueSystem
 
             _currentOptionObjects = new();
 
-            for(int i = 0; i < _currentOptions.Count; i++)
-            {
-                _currentOptionObjects.Add(Instantiate(_dialogueSelectionPrefab, _playerDialogueContainer));
-                DialogueSystemButtonHandler handler = _currentOptionObjects[i].GetComponent<DialogueSystemButtonHandler>();
-
-                handler.SetUpButton(_currentOptions[i]);
-            }
-        }
-
-        IEnumerator FillOutCharacterDialogue(string line, int speed = 5, AudioClip characterSoundbite = null)
-        {
-            string targetLine = line;
             if(InstantDialogue)
-            {_characterDialogueText.text = targetLine; yield break; }
+            {
+                _characterDialogueText.text = targetLine;
+            
+                for(int i = 0; i < _currentOptions.Count; i++)
+                {
+                    _currentOptionObjects.Add(Instantiate(_dialogueSelectionPrefab, _playerDialogueContainer));
+                    DialogueSystemButtonHandler handler = _currentOptionObjects[i].GetComponent<DialogueSystemButtonHandler>();
+
+                    handler.SetUpButton(_currentOptions[i]);
+                }
+            
+                yield break; 
+            }
 
             string generatingLine = "";
 
@@ -187,8 +194,22 @@ namespace DialogueSystem
                     AS.pitch = RandomPitch();
                     AS.Play();
                 }
+
+                if(Input.GetMouseButton(1))
+                {
+                    _characterDialogueText.text = targetLine;
+                    break;
+                }
             }
 
+            for(int i = 0; i < _currentOptions.Count; i++)
+            {
+                _currentOptionObjects.Add(Instantiate(_dialogueSelectionPrefab, _playerDialogueContainer));
+                DialogueSystemButtonHandler handler = _currentOptionObjects[i].GetComponent<DialogueSystemButtonHandler>();
+
+                handler.SetUpButton(_currentOptions[i]);
+            }
+            
             yield return null;
         }
 
